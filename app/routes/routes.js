@@ -7,29 +7,9 @@ module.exports = app => {
     //***************************************************
     router.get("/generateToken", cntl.generateToken);
 
-    router.post("/getlogs", cntl.getLogs);
-
-    router.get("/getcalls", cntl.getCalls);
-
-    router.post("/savetoken", cntl.saveToken);
-
-    router.get("/getsockets", cntl.getSockets);
-
-    router.post("/savesockets", cntl.saveSockets);
-    
-    router.post("/register", cntl.register);
+    router.get("/getlogs",auth, cntl.getTestAuth);
     
     router.post("/login", cntl.login);
-    
-    router.post("/GetDevice", cntl.getDevice);
-  
-    router.post("/SetDevice", cntl.setDevice);
-  
-    router.delete("/DeleteDevice", cntl.deleteDevice);
-  
-    router.post("/GetUsers", cntl.getUsers);
-
-    router.get("/GetDeviceType", cntl.getDeviceType);
   
     //***************************************************
 
